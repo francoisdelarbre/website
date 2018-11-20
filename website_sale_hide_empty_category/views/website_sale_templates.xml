@@ -14,6 +14,18 @@
                position="attributes">
             <attribute name="t-if">c.has_products_recurcive</attribute>
         </xpath>
+
+    </template>
+
+    <template inherit_id="website_sale.option_collapse_categories_recursive"
+              id="hide_categories_collapse_recursive"
+              active="True"
+              customize_show="True"
+              name="Hide Empty Category in Collapsible list">
+        <xpath expr="//t[@t-name='website_sale.option_collapse_categories_recursive']"
+               position="attributes">
+            <attribute name="t-if">categ.has_products_recurcive</attribute>
+        </xpath>
     </template>
 
 </odoo>
